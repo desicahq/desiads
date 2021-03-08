@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="rounded-full border border-gray-700 mr-2">
                 <Logo />
               </span>
-              <span>ACME</span>
+              <span>Desica</span>
             </a>
           </Link>
         </div>
@@ -87,7 +87,7 @@ export default function Footer() {
       </div>
       <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4 bg-primary-2">
         <div>
-          <span>&copy; 2020 ACME, Inc. All rights reserved.</span>
+          <span>&copy; 2021 Desica, LLC. All rights reserved.</span>
         </div>
         <div className="flex items-center">
           <span className="text-primary">Crafted by</span>

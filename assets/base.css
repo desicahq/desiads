@@ -109,3 +109,9 @@ a {
     opacity: 1;
   }
 }
+
+#nav {
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+  backdrop-filter: saturate(180%) blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
