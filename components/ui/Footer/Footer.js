@@ -89,14 +89,9 @@ export default function Footer() {
         <div>
           <span>&copy; 2021 Desica, LLC. All rights reserved.</span>
         </div>
-        <div className="flex items-center">
-          <span className="text-primary">Crafted by</span>
-          <a href="https://vercel.com" aria-label="Vercel.com Link">
-            <img
-              src="/vercel.svg"
-              alt="Vercel.com Logo"
-              className="inline-block h-6 ml-4 text-primary"
-            />
+        <div className="flex items-center" id="mt-0">
+          <a href="https://desica.uk" aria-label="desica.uk Link">
+            <img src="https://static.desica.uk/hotlink-ok/Badge.svg" className="h-8 text-primary"></img>
           </a>
         </div>
       </div>

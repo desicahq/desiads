@@ -115,3 +115,11 @@ a {
   backdrop-filter: saturate(180%) blur(5px);
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+#skip {
+  margin-top: -80px;
+}
+
+#mt-0 {
+  margin-top: 0;
+}
