@@ -1,3 +1,5 @@
+import Wave from "./Wave";
+
 export default function Header() {
     return (
         <>
@@ -10,6 +12,7 @@ export default function Header() {
             Privacy respecting ads shouldn't break the bank
           </p>
             </div>
+            <Wave />
         </header>
         <div>
           <p className="mt-24 text-xs uppercase text-accents-3 text-center font-bold tracking-widest">
