@@ -1,5 +1,6 @@
 const Wave = ({...props}) => {
     return (
+        <>
         <svg className="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 <defs>
@@ -12,6 +13,8 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
 <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
 </g>
 </svg>
+<div className="w-full h-24 bg-white mt-1"></div>
+</>
     )
 }
 

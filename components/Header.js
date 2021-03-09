@@ -14,11 +14,11 @@ export default function Header() {
             </div>
             <Wave />
         </header>
-        <div>
-          <p className="mt-24 text-xs uppercase text-accents-3 text-center font-bold tracking-widest">
+        <div className="bg-white">
+          <p className="pt-24 text-xs uppercase text-accents-2 text-center font-bold tracking-widest">
             Partners
           </p>
-          <div className="flex flex-col items-center my-8 space-y-4 sm:mt-8 sm:space-y-0 md:mx-auto md:max-w-2xl sm:grid sm:gap-6 sm:grid-cols-1">
+          <div className="flex flex-col items-center py-8 space-y-4 sm:pt-8 sm:space-y-0 md:mx-auto md:max-w-2xl sm:grid sm:gap-6 sm:grid-cols-1">
           <div className="flex items-center justify-center">
               <a href="https://desica.uk" aria-label="desica.uk Link" className="flex">
                 <img src="https://static.desica.uk/hotlink-ok/Badge.svg" className="h-12 text-primary"></img>
