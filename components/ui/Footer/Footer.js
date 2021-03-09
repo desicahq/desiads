@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="col-span-1 lg:col-span-2">
           <ul className="flex flex-initial flex-col md:flex-1">
             <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
+              <Link href="https://desica.uk">
                 <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
                   Home
                 </a>
@@ -30,19 +30,12 @@ export default function Footer() {
             <li className="py-3 md:py-0 md:pb-4">
               <Link href="/">
                 <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
-                  About
+                  Ads
                 </a>
               </Link>
             </li>
             <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
-                <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
-                  Careers
-                </a>
-              </Link>
-            </li>
-            <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
+              <Link href="https://blog.desica.uk/">
                 <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
                   Blog
                 </a>
@@ -58,31 +51,20 @@ export default function Footer() {
               </p>
             </li>
             <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
+              <Link href="https://policies.desica.uk/privacy">
                 <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
                   Privacy Policy
                 </a>
               </Link>
             </li>
             <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
+              <Link href="https://policies.desica.uk/terms">
                 <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
                   Terms of Use
                 </a>
               </Link>
             </li>
           </ul>
-        </div>
-        <div className="col-span-1 lg:col-span-6 flex items-start lg:justify-end text-primary">
-          <div className="flex space-x-6 items-center h-10">
-            <a
-              aria-label="Github Repository"
-              href="https://github.com/vercel/nextjs-subscription-payments"
-              className={s.link}
-            >
-              <GitHub />
-            </a>
-          </div>
         </div>
       </div>
       <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4 bg-primary-2">
