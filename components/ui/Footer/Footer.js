@@ -20,10 +20,15 @@ export default function Footer() {
         </div>
         <div className="col-span-1 lg:col-span-2">
           <ul className="flex flex-initial flex-col md:flex-1">
+          <li className="py-3 md:py-0 md:pb-4">
+              <p className="text-primary font-bold hover:text-accents-6 transition ease-in-out duration-150">
+                PRODUCTS
+              </p>
+            </li>
             <li className="py-3 md:py-0 md:pb-4">
               <Link href="https://desica.uk">
                 <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
-                  Home
+                  Desica
                 </a>
               </Link>
             </li>
