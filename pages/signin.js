@@ -54,7 +54,7 @@ const SignIn = () => {
 
   if (!user)
     return (
-      <div className="w-80 flex flex-col justify-between p-3 max-w-lg m-auto my-64">
+      <div className="w-80 flex flex-col justify-between p-3 max-w-lg m-auto my-48">
         <div className="flex justify-center pb-12 ">
           <Logo width="64px" height="64px" />
         </div>
@@ -65,7 +65,7 @@ const SignIn = () => {
                 message.type === 'error' ? 'text-pink' : 'text-green'
               } border ${
                 message.type === 'error' ? 'border-pink' : 'border-green'
-              } p-3`}
+              } p-3 rounded-md`}
             >
               {message.content}
             </div>

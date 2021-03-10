@@ -49,10 +49,10 @@ const SignUp = () => {
   return (
     <form
       onSubmit={handleSignup}
-      className="w-80 flex flex-col justify-between p-3 max-w-lg m-auto my-64"
+      className="w-80 flex flex-col justify-between p-3 max-w-lg m-auto my-48"
     >
       <div className="flex justify-center pb-12 ">
-        <Logo width="64px" height="64px" />
+        <Logo width="72px" height="72px" />
       </div>
       <div className="flex flex-col space-y-4">
         {message.content && (
@@ -61,7 +61,7 @@ const SignUp = () => {
               message.type === 'error' ? 'text-pink' : 'text-green'
             } border ${
               message.type === 'error' ? 'border-pink' : 'border-green'
-            } p-3`}
+            } p-3 rounded-md`}
           >
             {message.content}
           </div>
