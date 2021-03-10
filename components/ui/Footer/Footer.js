@@ -35,14 +35,14 @@ export default function Footer() {
             <li className="py-3 md:py-0 md:pb-4">
               <Link href="/">
                 <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
-                  Ads
+                  Desiads
                 </a>
               </Link>
             </li>
             <li className="py-3 md:py-0 md:pb-4">
-              <Link href="https://blog.desica.uk/">
+              <Link href="https://beta.kit.desica.uk/">
                 <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
-                  Blog
+                  Desikit
                 </a>
               </Link>
             </li>
@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4 bg-primary-2">
-        <div>
+        <div className="mb-6 sm:mb-0 md:mb-0 lg:md-0 xl:md-0 2xl:md-0">
           <span>&copy; 2021 Desica, LLC. All rights reserved.</span>
         </div>
         <div className="flex items-center" id="mt-0">
