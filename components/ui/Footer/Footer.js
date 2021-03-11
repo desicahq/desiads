@@ -8,7 +8,7 @@ import GitHub from '@/components/icons/GitHub';
 function Status () {
   const { data, error } = useSWR('https://status.desica.uk/index.json')
 
-  if (error) return <div>failed to load</div>
+  if (error) return <div className="flex rounded-md border border-accents-2 p-2 px-3"><p className="mr-1">Status:</p><p className="text-red">⟳ Failed to load status</p></div>
   if (!data) return <div className="flex rounded-md border border-accents-2 p-2 px-3"><p className="mr-1">Status:</p><p className="text-amber">⟳ Loading system status</p></div>
   if (data.summaryStatus === "ok") return <div className="flex rounded-md border border-accents-2 p-2 px-3"><p className="mr-1">Status:</p><p className="text-blue"><small>⬤</small> All systems normal</p></div>
 }
@@ -86,7 +86,7 @@ export default function Footer() {
           <span>&copy; 2021 Desica, LLC. All rights reserved.</span>
         </div>
         <div className="flex items-center" id="mt-0">
-          <a href="https://desica.uk" aria-label="desica.uk Link">
+          <a href="https://status.desica.uk" aria-label="status.desica.uk Link" target="_blank">
             <Status />
           </a>
         </div>
