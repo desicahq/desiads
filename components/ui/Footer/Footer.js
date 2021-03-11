@@ -8,9 +8,10 @@ import GitHub from '@/components/icons/GitHub';
 function Status () {
   const { data, error } = useSWR('https://status.desica.uk/index.json')
 
-  if (error) return <div className="flex rounded-md border border-accents-2 p-2 px-3"><p className="mr-1">Status:</p><p className="text-red">⟳ Failed to load status</p></div>
-  if (!data) return <div className="flex rounded-md border border-accents-2 p-2 px-3"><p className="mr-1">Status:</p><p className="text-amber">⟳ Loading system status</p></div>
+  if (error) return <div className="flex rounded-md border border-accents-2 p-2 px-3"><p className="mr-1">Status:</p><p className="text-red"><b>⟳</b> Failed to load status</p></div>
+  if (!data) return <div className="flex rounded-md border border-accents-2 p-2 px-3"><p className="mr-1">Status:</p><p className="text-amber"><b>⟳</b> Loading system status</p></div>
   if (data.summaryStatus === "ok") return <div className="flex rounded-md border border-accents-2 p-2 px-3"><p className="mr-1">Status:</p><p className="text-blue"><small>⬤</small> All systems normal</p></div>
+  if (data.summaryStatus === "disrupted") return <div className="flex rounded-md border border-accents-2 p-2 px-3"><p className="mr-1">Status:</p><p className="text-amber"><small>⬤</small> Partially disrupted</p></div>
 }
 
 export default function Footer() {
