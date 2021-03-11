@@ -87,7 +87,7 @@ export default function Footer() {
           <span>&copy; 2021 Desica, LLC. All rights reserved.</span>
         </div>
         <div className="flex items-center" id="mt-0">
-          <a href="https://status.desica.uk" aria-label="status.desica.uk Link" target="_blank">
+          <a href="https://status.desica.uk" aria-label="status.desica.uk Link" target="_blank" className="focus:outline-none focus:ring-0">
             <Status />
           </a>
         </div>
