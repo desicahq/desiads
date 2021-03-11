@@ -83,7 +83,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4 bg-primary-2">
-        <div className="mb-6 sm:mb-0 md:mb-0 lg:md-0 xl:md-0 2xl:md-0">
+        <div className="mb-6 sm:mb-6 md:mb-0 lg:md-0 xl:md-0 2xl:md-0">
           <span>&copy; 2021 Desica, LLC. All rights reserved.</span>
         </div>
         <div className="flex items-center" id="mt-0">
