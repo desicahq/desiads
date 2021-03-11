@@ -9,8 +9,8 @@ function Status () {
   const { data, error } = useSWR('https://status.desica.uk/index.json')
 
   if (error) return <div>failed to load</div>
-  if (!data) return <div>loading...</div>
-if (data.summaryStatus === "ok") return <div className="flex rounded-md border border-accents-2 p-2"><p>Status:{' '}</p><p className="text-blue"><small>⬤</small> All systems normal</p></div>
+  if (!data) return <div className="flex rounded-md border border-accents-2 p-2 px-3"><p className="mr-1">Status:</p><p className="text-amber">⟳ Loading system status</p></div>
+  if (data.summaryStatus === "ok") return <div className="flex rounded-md border border-accents-2 p-2 px-3"><p className="mr-1">Status:</p><p className="text-blue"><small>⬤</small> All systems normal</p></div>
 }
 
 export default function Footer() {
