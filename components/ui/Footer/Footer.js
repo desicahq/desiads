@@ -10,7 +10,7 @@ function Status () {
 
   if (error) return <div>failed to load</div>
   if (!data) return <div>loading...</div>
-  if (data.summaryStatus === "ok") return <div className="flex rounded-md border p-2">Status:{' '}<p className="text-blue-600">⬤ All systems normal</p></div>
+  if (data.summaryStatus === "ok") return <div className="flex rounded-md border p-2"><p>Status: </p><p className="text-blue">⬤ All systems normal</p></div>
 }
 
 export default function Footer() {
