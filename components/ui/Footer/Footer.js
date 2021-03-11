@@ -1,8 +1,19 @@
 import Link from 'next/link';
+import useSWR from 'swr'
 import s from './Footer.module.css';
 
 import Logo from '@/components/icons/Logo';
 import GitHub from '@/components/icons/GitHub';
+
+function Status () {
+  const { data, error } = useSWR('https://status.desica.uk/index.json')
+
+  if (error) return <div>failed to load</div>
+  if (!data) return <div>loading...</div>
+
+  // render data
+  return <div>hello {data.summaryStatus}!</div>
+}
 
 export default function Footer() {
   return (
@@ -78,7 +89,7 @@ export default function Footer() {
         </div>
         <div className="flex items-center" id="mt-0">
           <a href="https://desica.uk" aria-label="desica.uk Link">
-            <img src="https://static.desica.uk/hotlink-ok/Badge.svg" className="h-8 text-primary"></img>
+            <Status />
           </a>
         </div>
       </div>
