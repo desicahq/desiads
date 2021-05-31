@@ -3,6 +3,7 @@ import s from './Navbar.module.css';
 
 import Logo from '@/components/icons/Logo';
 import { useUser } from '@/utils/useUser';
+import Feedback from '@/components/Feedback';
 
 const Navbar = () => {
   const { user, signOut } = useUser();
@@ -42,6 +43,7 @@ const Navbar = () => {
                 <a className={s.link}>Sign in</a>
               </Link>
             )}
+            <Feedback />
           </div>
         </div>
       </div>

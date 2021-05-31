@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import useSWR from 'swr'
-import s from './Footer.module.css';
 
-import Logo from '@/components/icons/Logo';
-import GitHub from '@/components/icons/GitHub';
+import Logo from '../../icons/Logo';
 
 function Status () {
   const fetcher = (args) => fetch(args).then(res => res.json())
@@ -21,8 +19,8 @@ function Status () {
 
 export default function Footer() {
   return (
-    <footer className="mx-auto max-w-8xl px-6 bg-primary-2">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accents-2 py-12 text-primary transition-colors duration-150 bg-primary-2">
+    <footer className="bg-primary-2">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accents-2 py-12 text-primary transition-colors duration-150 bg-primary-2">
         <div className="col-span-1 lg:col-span-2">
           <Link href="/">
             <a className="flex flex-initial items-center font-bold md:mr-24">
@@ -48,7 +46,7 @@ export default function Footer() {
               </Link>
             </li>
             <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
+              <Link href="https://ads.desica.uk/">
                 <a className="text-primary hover:text-accents-6 transition ease-in-out duration-150">
                   Desiads
                 </a>
@@ -87,12 +85,12 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4 bg-primary-2">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row justify-between items-center space-y-4 bg-primary-2">
         <div className="mb-6 sm:mb-6 md:mb-0 lg:md-0 xl:md-0 2xl:md-0">
           <span>&copy; 2021 Desica, LLC. All rights reserved.</span>
         </div>
         <div className="flex items-center" id="mt-0">
-          <a href="https://status.desica.uk" aria-label="status.desica.uk Link" target="_blank" className="focus:outline-none focus:ring-0">
+          <a rel="noreferrer" href="https://status.desica.uk" aria-label="status.desica.uk Link" target="_blank" className="focus:outline-none focus:ring-0">
             <Status />
           </a>
         </div>
