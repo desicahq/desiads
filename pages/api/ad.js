@@ -45,7 +45,7 @@ const sendAd = async (req, res) => {
                 .select('views')
 
             console.log(views)
-            let count = views + 1
+            let count = views.views + 1
             console.log(count)
 
             const { data: sent, error: sentErr } = await supabase
