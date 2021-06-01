@@ -23,6 +23,12 @@ function runMiddleware(req, res, fn) {
 const sendAd = async (req, res) => {  
     await runMiddleware(req, res, cors)
 
+    const { data: ads, error } = await supabase
+        .from('ads')
+        .select('title, description, url')
+
+    const ad = Math.floor(Math.random() * ads.length)
+
     if (req.method === 'POST') {
         const id = req.body.id
         const domain = req.body.domain
@@ -49,12 +55,6 @@ const sendAd = async (req, res) => {
 
         return res.status(404).json('Site not found')
     }
-
-    const { data: ads, error } = await supabase
-        .from('ads')
-        .select('title, description, url')
-
-    const ad = Math.floor(Math.random() * ads.length)
   
     if (error) return res.status(401).json({ error: error.message })
     return res.status(200).json(ads[ad])
