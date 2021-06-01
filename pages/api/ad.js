@@ -29,6 +29,7 @@ const sendAd = async (req, res) => {
 
         const { data: exists, error:existsErr  } = await supabase
             .from('sites')
+            .select('*')
             .eq('domain', domain)
             .eq('id', id)
 
