@@ -44,9 +44,11 @@ const sendAd = async (req, res) => {
                 .from('sites')
                 .select('views')
 
+            let count = views++
+
             const { data: sent, error: sentErr } = await supabase
                 .from('sites')
-                .update({views, views})
+                .update({views, count})
                 .eq('id', id)
                 .eq('domain', domain)
 
