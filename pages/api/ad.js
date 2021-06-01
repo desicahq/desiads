@@ -43,7 +43,7 @@ const sendAd = async (req, res) => {
                 .update({views, views})
                 .eq('id', id)
                 .eq('domain', domain)
-            sent()
+
             return res.status(200).json(ads[ad])
         }
 
