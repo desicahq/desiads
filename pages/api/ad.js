@@ -40,6 +40,8 @@ const sendAd = async (req, res) => {
             const { data: sent, error: sentErr } = await supabase
                 .from('sites')
                 .update({views, views})
+                .eq('id', id)
+                .eq('domain', domain)
             sent()
             return res.status(200).json(ads[ad])
         }
