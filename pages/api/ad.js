@@ -20,8 +20,32 @@ function runMiddleware(req, res, fn) {
   })
 }
 
-const getUser = async (req, res) => {  
+const sendAd = async (req, res) => {  
     await runMiddleware(req, res, cors)
+
+    if (req.method === 'POST') {
+        const id = req.body.id
+        const domain = req.body.domain
+
+        const { data: exists, error:existsErr  } = await supabase
+            .from('sites')
+            .eq('domain', domain)
+            .eq('id', id)
+
+        if (exists) {
+            const { data:views, error:viewsErr } = await supabase
+                .from('sites')
+                .select('views')
+
+            const { data: sent, error: sentErr } = await supabase
+                .from('sites')
+                .update({views, views})
+            sent()
+            return res.status(200).json(ads[ad])
+        }
+
+        return res.status(404).json('Site not found')
+    }
 
     const { data: ads, error } = await supabase
         .from('ads')
@@ -33,4 +57,4 @@ const getUser = async (req, res) => {
     return res.status(200).json(ads[ad])
   }
   
-  export default getUser
+  export default sendAd
