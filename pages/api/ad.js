@@ -44,7 +44,7 @@ const sendAd = async (req, res) => {
                 .from('sites')
                 .select('views')
 
-            console.log(views)
+            console.log(views[0].views)
             let count = views.views + 1
             console.log(count)
 
