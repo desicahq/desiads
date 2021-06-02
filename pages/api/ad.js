@@ -40,6 +40,7 @@ const sendAd = async (req, res) => {
             .eq('id', id)
 
         if (exists) {
+            console.log(exists)
             const { data:views, error:viewsErr } = await supabase
                 .from('sites')
                 .select('views')
