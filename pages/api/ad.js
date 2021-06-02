@@ -51,7 +51,7 @@ const sendAd = async (req, res) => {
             const { data: sent, error: sentErr } = await supabase
                 .from('sites')
                 .update({views, count})
-                .eq(id, id)
+                .match({id, id})
 
             console.log(sent)
 
