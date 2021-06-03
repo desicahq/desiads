@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
-import Navbar from '../components/ui/Navbar';
-import Footer from '../components/ui/Footer';
+import Navbar from '@/components/ui/Navbar';
+import Footer from '@/components/ui/Footer';
 
 export default function Layout({ children, meta: pageMeta }) {
   const router = useRouter();

@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import s from './Navbar.module.css';
 
-import Logo from '../../../components/icons/Logo';
-import { useUser } from '../../../utils/useUser';
-import Feedback from '../../../components/Feedback';
+import Logo from '@/components/icons/Logo';
+import { useUser } from '@/utils/useUser';
+import Feedback from '@/components/Feedback';
 
 const Navbar = () => {
   const { user, signOut } = useUser();
