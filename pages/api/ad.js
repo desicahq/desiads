@@ -25,7 +25,7 @@ const sendAd = async (req, res) => {
 
     const { data: ads, error } = await supabase
         .from('ads')
-        .select('title, description, url')
+        .select('title, description, url, id')
 
     const ad = Math.floor(Math.random() * ads.length)
 
