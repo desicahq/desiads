@@ -40,26 +40,24 @@ const sendAd = async (req, res) => {
             .eq('id', id)
 
         if (exists) {
-            console.log(exists)
             const { data:views, error:viewsErr } = await supabase
                 .from('sites')
                 .select('views')
 
-            console.log(views[0].views)
             let count = views[0].views + 1
-            console.log(count)
+            console.log(typeof count)
+            console.log(id)
+            console.log(domain)
 
             const { data: sent, error: sentErr } = await supabase
                 .from('sites')
-                .update({views, count})
-                .match({id, id})
-
-            console.log(sent)
+                .update({views: count})
+                .eq('domain', domain)
 
             return res.status(200).json(ads[ad])
         }
 
-        return res.status(404).json('Site not found')
+        return res.status(404).json('Site ' + domain + ' with an id of ' + id + ' was not found.')
     }
   
     if (error) return res.status(401).json({ error: error.message })
