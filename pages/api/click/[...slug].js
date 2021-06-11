@@ -1,4 +1,5 @@
 import { supabase } from '@/utils/supabase-client'
+import { stripe } from '@/utils/stripe'
 import Cors from 'cors'
 
 // Initializing the cors middleware
@@ -35,6 +36,8 @@ const click = async (req, res) => {
         .select('*')
         .eq('id', slug[1])
 
+    console.log(ad, slug)
+
     if (!slug[0]) return res.status(404).end(`No campaign slug was provided`)
     if (!slug[1]) return res.status(403).end(`You'll need to specify your site id`)
     if (!ad[0]) return res.status(404).end(`Desiad campaign not found`)
@@ -49,6 +52,21 @@ const click = async (req, res) => {
         .update({ clicks: adClickCount })
         .eq('id', slug[0])
 
+    let { data: subId, error: subIdErr } = await supabase
+    .from('subscriptions')
+    .select('id')
+
+    let stringSubId = subId.toString()
+
+    console.log(subId.toString())
+
+        stripe.subscriptionItems.createUsageRecord(
+            stringSubId,
+            {
+              quantity: 1
+            }
+         );
+
     let { data: updateSiteClicks, updateSiteErr } = await supabase
         .from('sites')
         .update({ clicks: siteClickCount })
@@ -56,7 +74,7 @@ const click = async (req, res) => {
 
     console.log(slug[0])
 
-    return res.redirect(ad[0].url)
+    return res.end('Hi') //res.redirect(ad[0].url)
 
 }
 
