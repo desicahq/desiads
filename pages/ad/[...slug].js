@@ -30,6 +30,8 @@ const click = async (req, res) => {
         .select('*')
         .eq('id', slug[0])
 
+    return ad
+
 }
 
 export default click
